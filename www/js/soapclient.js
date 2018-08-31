@@ -54,11 +54,14 @@ function SOAPClientParameters()
 function SOAPClient() {}
 
 SOAPClient.invoke = function(url, method, parameters, async, callback)
-{
+{  
+   //try{
 	if(async)
 		SOAPClient._loadWsdl(url, method, parameters, async, callback);
 	else
 		return SOAPClient._loadWsdl(url, method, parameters, async, callback);
+  //}
+  //catch(err){document.getElementById("demo").innerHTML = err.message;}
 }
 
 // private: wsdl cache
