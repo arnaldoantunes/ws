@@ -81,12 +81,15 @@
        alert("Sem conexão com a rede");
 	}
 	
+	function serverOnline(){
+	   veServer()
+	}
+	
 	function veServer(){
 		var p = new Ping();
 		p.ping("http://192.168.1.107/", function(err, data) {
 			if (err) {
 			   alert("Servidor não localizado");
-			   //return false;
 			   exitFromApp();
 			}
 		});  
@@ -109,7 +112,6 @@
 	function exitFromApp(){
        navigator.app.exitApp();
     }
-	
 	</script>
 		
 		

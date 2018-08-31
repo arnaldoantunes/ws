@@ -20,8 +20,8 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-		//document.addEventListener("offline", onOffline, false);
-		//document.addEventListener("online", onOnline, false);
+		document.addEventListener("offline", onOffline, false);
+		document.addEventListener("serverOnline", serverOnline, false);
     },
 
     // deviceready Event Handler
