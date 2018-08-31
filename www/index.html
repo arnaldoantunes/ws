@@ -87,7 +87,7 @@
 			if (err) {
 			   alert("Servidor não localizado");
 			   //return false;
-			   mostra('login');
+			   exitFromApp();
 			}
 		});  
     	return true;		
@@ -102,6 +102,9 @@
 	   limpa();
 	   $("#"+idpagina).show();
 	}
+	function exitFromApp(){
+       navigator.app.exitApp();
+    }
 	
 	</script>
 		
