@@ -42,6 +42,10 @@
 		<script type="text/javascript" src="js/ping.js" type="text/javascript"></script>
 	<script type="text/javascript">
 	
+		function callAnothePage(path){
+		   window.location = path;
+		}
+	
 	//var url = document.location.href.replace("demo.htm", "webservicedemo.asmx");
 	//var url = "http://infogestor.com.br/painel/iService.asmx";
 	//var url = "http://localhost:52559/marketplace/webs.asmx";
@@ -83,7 +87,7 @@
 			if (err) {
 			   alert("Servidor não localizado");
 			   //return false;
-			   window.location.href = "index.html";
+			   callAnothePage('index.html')
 			}
 		});  
     	return true;		
