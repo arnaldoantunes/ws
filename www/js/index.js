@@ -20,8 +20,8 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-		document.addEventListener("offline", onOffline, false);
-		document.addEventListener("serverOnline", serverOnline, false);
+		//document.addEventListener("offline", onOffline, false);
+		document.addEventListener("serverOnline", this.veServidor.bind(this), false);
     },
 
     // deviceready Event Handler
@@ -35,7 +35,19 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
        
-    }
+    },
+	
+	veServidor: function(){
+		var p = new Ping();
+		p.ping("http://192.168.1.107/", function(err, data) {
+			if (err) {
+			   alert("Servidor não localizado");
+			   exitFromApp();
+			}
+		});  
+    	return true;		
+	}
+	
 };
 
 app.initialize();
