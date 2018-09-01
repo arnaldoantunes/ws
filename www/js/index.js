@@ -34,20 +34,9 @@ var app = {
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-       veServidor();
+       
     },
-	
-	veServidor: function(){
-		var p = new Ping();
-		p.ping("http://192.168.1.107/", function(err, data) {
-			if (err) {
-			   alert("Servidor não localizado");
-			   exitFromApp();
-			}
-		});  
-    	return true;		
-	}
-	
+			
 };
 
 app.initialize();

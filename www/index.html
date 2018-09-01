@@ -89,7 +89,7 @@
 		var p = new Ping();
 		p.ping("http://192.168.1.107/", function(err, data) {
 			if (err) {
-			   alert("Servidor não localizado");
+			   navigator.app.alert("Servidor não localizado", null, ["Atenção"], ["Ok"])
 			   exitFromApp();
 			}
 		});  
