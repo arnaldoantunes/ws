@@ -21,7 +21,6 @@ var app = {
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
 		//document.addEventListener("offline", onOffline, false);
-		//document.addEventListener("serverOnline", this.veServidor.bind(this), false);
     },
 
     // deviceready Event Handler
